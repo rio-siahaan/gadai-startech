@@ -1,61 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Gadai Startech - Web Application
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+**Gadai Startech** is a web-based application developed using **Laravel** for a pawnshop company.  
+This system provides comprehensive information related to the company's services, including office locations, pawn simulation, procedures, and other relevant details to help customers easily access and understand the pawn process.  
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
+- Company profile & branch office information  
+- **Pawn Simulation**: calculate estimated loan values based on collateral  
+- **How to Pawn**: step-by-step guide for customers  
+- Services information (loan terms, conditions, interest rates)  
+- Contact page with integrated form for customer inquiries  
+- Responsive design for both desktop and mobile devices  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Tech Stack
+- **Framework**: Laravel  
+- **Frontend**: Blade Templates, Bootstrap/Tailwind CSS  
+- **Database**: MySQL  
+- **Authentication**: Laravel Breeze / Laravel Auth (if enabled)  
+- **Other Tools**: Composer, Artisan CLI  
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/gadai-startech.git
+   cd gadai-startech
+2. Install dependencies:
+    ```bash
+    composer install
+    npm install && npm run dev
+3. Configure environment variables:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Update database settings in .env
+    
+    ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=gadai_startech
+    DB_USERNAME=root
+    DB_PASSWORD=yourpassword
 
-## Laravel Sponsors
+4. Run migrations and seeders (if available):
+    ```bash
+    php artisan migrate --seed
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+5. Start local development server:
+    ```bash
+    php artisan serve
 
-### Premium Partners
+6. Access the application in your browser:
+    ```bash
+    http://localhost:8000
+    
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+📂 Project Structure
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    app/
+    ├── Http/
+    ├── Models/
+    ├── Controllers/
+    resources/
+    ├── views/
+    └── css, js
+    routes/
+    └── web.php
+    database/
+    └── migrations/
 
-## Code of Conduct
+📌 Future Improvements
+- Online pawn application with digital form submission
+- Admin dashboard for managing branch data and simulations
+- Customer account system for transaction history
+- Integration with payment gateways
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+🤝 Contributing
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Contributions are welcome! Feel free to fork this repository, open an issue, or submit a pull request for improvements or new features.
